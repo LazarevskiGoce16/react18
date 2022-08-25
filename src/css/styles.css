@@ -1,0 +1,12 @@
+
+.primaryParagraph {
+    background-color: yellow;
+    color: blue;
+    padding:10px;
+}
+
+.secondaryParagraph {
+    background-color: teal;
+    color:black;
+    padding:10px;
+}
