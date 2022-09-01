@@ -1,7 +1,14 @@
-const App = () => {
+import {DisplayDropdowns} from "./components/DisplayDropdowns"
+import {Examples} from "./components/Examples"
 
+
+const App = () => {
   return (
-    <div></div>
+    <div>
+      {/* <DisplayDropdowns /> */}
+
+      <Examples />
+    </div>
   );
 }
 
