@@ -1,7 +1,12 @@
+import {Todo} from "./components/Todo"
+import "./css/index.css"
+
 const App = () => {
 
   return (
-    <div></div>
+    <div>
+      <Todo />
+    </div>
   );
 }
 
