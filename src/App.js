@@ -9,6 +9,8 @@ import { Comments } from "./components/Comments"
 import { Gallery } from "./components/Gallery"
 import { useEffect, useState } from "react"
 
+import {GalleryProvider} from "./providers/GalleryProvider"
+
 const App = () => {
 
   const [posts, setPosts] = useState(null)
@@ -30,11 +32,13 @@ const App = () => {
     <div>
       <Nav />
       {/* <pre>{JSON.stringify(posts, null, 2)}</pre> */}
-      <Routes>
-        <Route path="/posts"    element={<Posts posts={posts} />}/>
-        <Route path="/comments" element={<Comments />}/>
-        <Route path="/gallery"  element={<Gallery />}/>
-      </Routes>
+      <GalleryProvider>
+        <Routes>
+          <Route path="/posts"    element={<Posts posts={posts} />}/>
+          <Route path="/comments" element={<Comments />}/>
+          <Route path="/gallery"  element={<Gallery />}/>
+        </Routes>
+      </GalleryProvider>
     </div>
   );
 }
