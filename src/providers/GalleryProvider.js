@@ -6,6 +6,7 @@ export const GalleryContext = createContext(null)
 export const GalleryProvider = ({children}) => {
 
     const [ photos , setPhotos ] = useState([])
+    const [ selectedImage, setSelectedImage ] = useState("")
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,9 +18,16 @@ export const GalleryProvider = ({children}) => {
           fetchData()
     },[])
 
+    const deleteImage = (imageId) => {
+        setPhotos(photos.filter( photo => photo.id !== imageId))
+        setSelectedImage("")
+    }
 
     const contextValue = {
-        photos
+        photos,
+        deleteImage,
+        selectedImage,
+        setSelectedImage
     }
 
     // returns state that can be accessed by child components

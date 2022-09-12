@@ -26,7 +26,7 @@ const App = () => {
     fetchData()
   }, [])
   
-  console.log("APP" , posts)
+  // console.log("APP" , posts)
 
   return (
     <div>
