@@ -3,11 +3,19 @@ import { GalleryContext } from "../providers/GalleryProvider"
 
 export const Gallery = () => {
 
-    const providerValue = useContext(GalleryContext)
+    const {photos , deleteImage} = useContext(GalleryContext)
     
+    // delete an image on click ( deleteImage )
+
     return (
         <div>
-            <pre>{JSON.stringify(providerValue, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(photos, null, 2)}</pre> */}
+
+            {photos.map( photo => (
+                <div key={photo.id} style={{display:"inline-block"}}>
+                    <img src={photo.thumbnailUrl} alt={photo.title} />
+                </div>
+            ))}
         </div>
     )
 }
