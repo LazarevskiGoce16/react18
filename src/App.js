@@ -1,11 +1,16 @@
 // import { PureUnpure } from "./components/PureUnpure";
-import { Counter } from "./components/Counter"
+// import { Counter } from "./components/Counter"
+// import { Todos } from "./components/Todos"
+import { Posts } from "./components/Posts"
 
 const App = () => {
 
   return <div>
 
-      <Counter />
+      <Posts />
+      {/* <Todos /> */}
+      <hr /><hr />
+      {/* <Counter /> */}
       {/* <PureUnpure /> */}
     </div>
 }
